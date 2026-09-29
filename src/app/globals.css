@@ -1,26 +1,40 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-color: #070514;
+  --card-bg: rgba(14, 10, 32, 0.85);
+  --cyber-cyan: #00F5FF;
+  --cyber-purple: #7C3AED;
+  --emerald: #10B981;
+  --cyan-glow: rgba(0, 245, 255, 0.25);
+  --purple-glow: rgba(124, 58, 237, 0.35);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(0, 245, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(124, 58, 237, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(7, 5, 20, 0.95) 0%, var(--bg-color) 100%);
+  color: #FFFFFF;
+  font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  overflow-x: hidden;
+}
+
+@keyframes cyberFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
 }
