@@ -15,6 +15,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tepperstate.github.io/kycflow-website"),
   title: "KYC Flow v1.7 — Next-Gen Virtual Camera Injection & Identity Verification Suite",
   description: "Download KYC Flow v1.7 APK. Advanced Virtual Camera PC/OBS Studio bridge, Real-time AI, and automated identity verification utility suite for Android 10-15+, PC & Mac.",
   keywords: "KYC Flow, virtual camera android, OBS virtual camera bridge, camera injection tool, identity verification testing",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KYC Flow v1.7 — Virtual Camera Injection & Identity Verification Suite",
     description: "Stream live video from PC/OBS to your mobile camera. Instant activation, zero-log protection, and automated document testing.",
-    url: "/",
+    url: "https://tepperstate.github.io/kycflow-website/",
     siteName: "KYC Flow",
     images: [{ url: "/kyc-flow-logo.png", width: 512, height: 512, alt: "KYC Flow Logo" }],
     type: "website",
