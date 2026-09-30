@@ -65,8 +65,11 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#070514]"
-      style={{ backgroundImage: "radial-gradient(circle at 20% 20%, rgba(0,245,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(124,58,237,0.14) 0%, transparent 50%)" }}>
+    <div className="flex items-center justify-center bg-[#070514]"
+      style={{
+        backgroundImage: "radial-gradient(circle at 20% 20%, rgba(0,245,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(124,58,237,0.14) 0%, transparent 50%)",
+        position: "fixed", inset: 0, zIndex: 50,
+      }}>
       <div className="w-[340px] bg-[rgba(14,10,32,0.9)] border border-[rgba(124,58,237,0.25)] rounded-[22px] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.7)]">
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#00F5FF] via-[#7C3AED] to-[#00F5FF] rounded-t-[22px]" style={{ position: "relative" }} />
         <div className="text-center mb-7">
@@ -219,7 +222,11 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-[#070514] text-white"
-      style={{ backgroundImage: "radial-gradient(circle at 10% 10%, rgba(0,245,255,0.06) 0%, transparent 50%), radial-gradient(circle at 90% 90%, rgba(124,58,237,0.08) 0%, transparent 50%)" }}>
+      style={{
+        backgroundImage: "radial-gradient(circle at 10% 10%, rgba(0,245,255,0.06) 0%, transparent 50%), radial-gradient(circle at 90% 90%, rgba(124,58,237,0.08) 0%, transparent 50%)",
+        position: "fixed", inset: 0, overflowY: "auto", zIndex: 50,
+        maxWidth: "100vw", width: "100vw",
+      }}>
 
       {/* Toast */}
       {toast && (
